@@ -1,0 +1,20 @@
+;suppress inspection "DuplicateKeyInSection" for whole file
+[ignore]
+.*/public/.*
+.*/blueprints/.*
+.*/templates/.*
+.*/test/.*
+.*/node_modules/webpack-visualizer-plugin/.*
+
+[include]
+
+[libs]
+
+[options]
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=src
+module.name_mapper='^\(.*\)\.scss$' -> '<PROJECT_ROOT>/flow/stub/scss.js'
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+esproposal.export_star_as=enable
+esproposal.decorators=ignore

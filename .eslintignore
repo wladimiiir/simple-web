@@ -1,0 +1,12 @@
+blueprints/*
+templates/*
+node_modules/*
+public/*
+dist/*
+test/e2e/*
+test/mock-server/*
+postcss.config.js
+flow-typed/**/*
+webpack.common.js
+webpack.dev.js
+webpack.prod.js

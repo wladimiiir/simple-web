@@ -1,0 +1,25 @@
+{
+  "presets": [
+    "env",
+    "react"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "syntax-flow",
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src"
+        ],
+        "alias": {
+          "test": "./test"
+        }
+      }
+    ],
+    "transform-decorators-legacy",
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "syntax-dynamic-import"
+  ]
+}

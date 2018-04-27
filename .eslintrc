@@ -1,0 +1,256 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "flowtype",
+    "jsx-a11y",
+    "babel"
+  ],
+  "globals": {
+    "fetch": false,
+    "document": false,
+    "process": false,
+    "module": false
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "mocha": true,
+    "amd": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "allowImportExportEverywhere": true,
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": false
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "rules": {
+    // general configs
+    "indent": [
+      "error",
+      4,
+      {
+        "SwitchCase": 1,
+        "VariableDeclarator": {
+          "var": 2,
+          "let": 2,
+          "const": 3
+        },
+        "MemberExpression": 1,
+        "FunctionDeclaration": {
+          "parameters": 1
+        },
+        "CallExpression": {
+          "arguments": 1
+        },
+        "ArrayExpression": 1,
+        "ObjectExpression": 1
+      }
+    ],
+    "no-extra-semi": "error",
+    "curly": [
+      "error",
+      "all"
+    ],
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "object-curly-spacing": [
+      "error",
+      "never"
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "local",
+        "args": "after-used"
+      }
+    ],
+    "semi": [
+      "error",
+      "always",
+      {
+        "omitLastInOneLineBlock": true
+      }
+    ],
+    "no-console": [
+      "warn"
+    ],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "never",
+        "named": "never"
+      }
+    ],
+    "brace-style": [
+      "error",
+      "1tbs"
+    ],
+    "keyword-spacing": "error",
+    "eol-last": "error",
+    //jsx-a11y
+    "jsx-a11y/onclick-has-role": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    // react configs
+    "react/jsx-closing-bracket-location": "error",
+    "react/jsx-curly-spacing": [
+      "error",
+      "never"
+    ],
+    "react/jsx-equals-spacing": [
+      "error",
+      "never"
+    ],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".js"
+        ]
+      }
+    ],
+    "react/jsx-indent": [
+      "error",
+      4
+    ],
+    "react/jsx-key": "error",
+    "react/jsx-no-bind": [
+      "error",
+      {
+        "allowArrowFunctions": true
+      }
+    ],
+    "react/jsx-no-comment-textnodes": "warn",
+    "react/jsx-no-duplicate-props": "error",
+    "react/jsx-no-target-blank": "error",
+    "react/jsx-no-undef": "error",
+    "react/jsx-tag-spacing": [
+      "error",
+      {
+        "beforeSelfClosing": "never"
+      }
+    ],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/jsx-wrap-multilines": "error",
+    "react/no-did-mount-set-state": "error",
+    "react/no-did-update-set-state": "error",
+    "react/no-direct-mutation-state": "error",
+    "react/no-is-mounted": "error",
+    "react/no-multi-comp": [
+      "error",
+      {
+        "ignoreStateless": true
+      }
+    ],
+    "react/no-unescaped-entities": "error",
+    "react/no-unknown-property": "error",
+    "react/no-unused-prop-types": "error",
+    "react/prefer-es6-class": [
+      "error",
+      "always"
+    ],
+    "react/prop-types": "error",
+    "react/require-render-return": "error",
+    "react/sort-comp": [
+      "error", {
+        "order": [
+          "static-methods",
+          "lifecycle",
+          "everything-else",
+          "render"
+        ],
+        "groups": {
+          "lifecycle": [
+            "displayName",
+            "propTypes",
+            "props",
+            "defaultProps",
+            "state",
+            "contextTypes",
+            "childContextTypes",
+            "mixins",
+            "statics",
+            "constructor",
+            "getDefaultProps",
+            "getInitialState",
+            "getChildContext",
+            "componentWillMount",
+            "componentDidMount",
+            "componentWillReceiveProps",
+            "shouldComponentUpdate",
+            "componentWillUpdate",
+            "componentDidUpdate",
+            "componentWillUnmount"
+          ]
+        }
+      }
+    ],
+    // flow configs
+    "flowtype/boolean-style": [
+      2,
+      "boolean"
+    ],
+    "flowtype/define-flow-type": 1,
+    "flowtype/delimiter-dangle": [
+      2,
+      "never"
+    ],
+    "flowtype/generic-spacing": [
+      2,
+      "never"
+    ],
+    "flowtype/no-primitive-constructor-types": 2,
+    "flowtype/object-type-delimiter": [
+      2,
+      "comma"
+    ],
+    "flowtype/require-parameter-type": 0,
+    "flowtype/require-return-type": 0,
+    "flowtype/require-valid-file-annotation": 2,
+    "flowtype/semi": [
+      2,
+      "always"
+    ],
+    "flowtype/space-after-type-colon": [
+      2,
+      "always"
+    ],
+    "flowtype/space-before-generic-bracket": [
+      2,
+      "never"
+    ],
+    "flowtype/space-before-type-colon": [
+      2,
+      "never"
+    ],
+    "flowtype/union-intersection-spacing": [
+      2,
+      "always"
+    ],
+    "flowtype/use-flow-type": 1,
+    "flowtype/valid-syntax": 1,
+    // babel
+    "babel/semi": 2
+  }
+}
